@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:15
+-keep class gideon.bluetooth.Screen_Main { <init>(...); }
+
+# view AndroidManifest.xml #generated:7
+-keep class gideon.bluetooth.Screen_Splash { <init>(...); }
+
