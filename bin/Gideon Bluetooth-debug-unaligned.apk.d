@@ -1,3 +1,3 @@
-/home/gideon/NetBeansProjects/Gideon Bluetooth/bin/Gideon Bluetooth-debug-unaligned.apk : \
-/home/gideon/NetBeansProjects/Gideon Bluetooth/bin/Gideon Bluetooth.ap_ \
-/home/gideon/NetBeansProjects/Gideon Bluetooth/bin/classes.dex \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/Gideon Bluetooth-debug-unaligned.apk : \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/Gideon Bluetooth.ap_ \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes.dex \
