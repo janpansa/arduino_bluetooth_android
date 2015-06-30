@@ -9,7 +9,6 @@
     <ImageView  android:id="@+id/logoimage"
                 android:src="@drawable/splash"
                 android:layout_width="wrap_content"
-                android:layout_weight="wrap_content"
                 android:layout_centerInParent="true"
                 android:scaleType="centerInside"
                 android:paddingBottom="10dip"
