@@ -2,29 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:background="#ffffff"
+              android:background="@drawable/tile"
               android:orientation="vertical"
-              android:id="@+id/splashll"
-              >
-
+              android:id="@+id/splashll">
+    <ImageView  android:id="@+id/logoimage"
+                android:src="@drawable/splash"
+                android:layout_width="wrap_content"
+                android:layout_weight="wrap_content"
+                android:scaleType="centerInside"
+                android:paddingLeft="50dip"
+                android:paddingRight="50dip"
+                android:paddingBottom="10dip"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="10dip"
+                android:layout_marginTop="200dp"
+                android:layout_height="wrap_content"/>
     <TextView   android:id="@+id/logotext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#6f6f6f"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/app_name"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textSize="45sp"
-                android:fontFamily="sans-serif-light"
-                />
+                android:textSize="35sp"
+                android:fontFamily="sans-serif-light"/>
     <TextView   android:id="@+id/versiontext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#6f6f6f"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textSize="25sp"
-                android:fontFamily="sans-serif-light"
-                />
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-light"/>
 </LinearLayout>
