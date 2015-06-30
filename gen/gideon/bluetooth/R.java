@@ -12,23 +12,19 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int light_toast=0x7f020001;
-        public static final int splash=0x7f020002;
-        public static final int tile=0x7f020003;
     }
     public static final class id {
         public static final int edittext_mcnumber=0x7f060006;
         public static final int listview_device=0x7f060004;
         public static final int ll=0x7f060002;
-        public static final int logoimage=0x7f060009;
-        public static final int logotext=0x7f06000a;
+        public static final int logotext=0x7f060009;
         public static final int menu_cancel=0x7f060001;
         public static final int menu_connect=0x7f060000;
         public static final int splashll=0x7f060008;
         public static final int textview_choose_device=0x7f060003;
         public static final int textview_mcnum=0x7f060005;
         public static final int textview_scan_history=0x7f060007;
-        public static final int versiontext=0x7f06000b;
+        public static final int versiontext=0x7f06000a;
     }
     public static final class layout {
         public static final int device_menu=0x7f030000;

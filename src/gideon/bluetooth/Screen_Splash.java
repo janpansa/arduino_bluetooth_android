@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -31,9 +32,11 @@ import java.util.logging.Logger;
 public class Screen_Splash extends Activity
 {
     // Set the display time, in milliseconds (or extract it out as a configurable parameter)
-    private final int SPLASH_DISPLAY_LENGTH = 3000;
+    private final int SPLASH_DISPLAY_LENGTH = 10000;
 
     TextView versiontext;
+    TextView textview;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -45,9 +48,22 @@ public class Screen_Splash extends Activity
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
             PackageManager packageManager = this.getPackageManager();
+
+            versiontext = (TextView) findViewById(R.id.versiontext);
+            textview = (TextView) findViewById(R.id.logotext);
+            Typeface tf = Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/yellowtail.ttf");
+            textview.setTypeface(tf);
+            String myVersionName = "not available"; // initialize String
             String packageName = this.getPackageName();
 
             versiontext = (TextView) findViewById(R.id.versiontext);
+            try
+            {     
+                myVersionName = packageManager.getPackageInfo(packageName, 0).versionName;
+            } catch (PackageManager.NameNotFoundException ex) {
+                Logger.getLogger(Screen_Splash.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            versiontext.setText(myVersionName);
         
     }
 
