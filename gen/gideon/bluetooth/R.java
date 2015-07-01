@@ -9,9 +9,12 @@ package gideon.bluetooth;
 
 public final class R {
     public static final class array {
-        public static final int menuitems=0x7f060000;
+        public static final int menuitems=0x7f050000;
     }
     public static final class attr {
+    }
+    public static final class color {
+        public static final int dark=0x7f060000;
     }
     public static final class drawable {
         public static final int action_search=0x7f020000;
@@ -21,16 +24,16 @@ public final class R {
         public static final int ic_launcher_1=0x7f020004;
     }
     public static final class id {
-        public static final int action_websearch=0x7f080009;
-        public static final int content_frame=0x7f080004;
-        public static final int drawer_layout=0x7f080003;
-        public static final int hometext=0x7f080002;
-        public static final int left_drawer=0x7f080005;
-        public static final int logotext=0x7f080007;
-        public static final int menu_cancel=0x7f080001;
-        public static final int menu_connect=0x7f080000;
-        public static final int splashll=0x7f080006;
-        public static final int versiontext=0x7f080008;
+        public static final int action_websearch=0x7f090009;
+        public static final int content_frame=0x7f090004;
+        public static final int drawer_layout=0x7f090003;
+        public static final int hometext=0x7f090002;
+        public static final int left_drawer=0x7f090005;
+        public static final int logotext=0x7f090007;
+        public static final int menu_cancel=0x7f090001;
+        public static final int menu_connect=0x7f090000;
+        public static final int splashll=0x7f090006;
+        public static final int versiontext=0x7f090008;
     }
     public static final class layout {
         public static final int device_menu=0x7f030000;
@@ -43,7 +46,7 @@ public final class R {
         public static final int screen_splash=0x7f030007;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
         public static final int action_websearch=0x7f040003;
@@ -53,6 +56,7 @@ public final class R {
         public static final int drawer_open=0x7f040001;
     }
     public static final class style {
-        public static final int Gideon=0x7f050000;
+        public static final int Gideon=0x7f070001;
+        public static final int GideonSplash=0x7f070000;
     }
 }
