@@ -12,6 +12,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 import java.util.logging.Level;

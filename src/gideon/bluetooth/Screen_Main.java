@@ -1,12 +1,12 @@
 package gideon.bluetooth;
 
-import java.util.Locale;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
@@ -19,7 +19,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -62,6 +61,8 @@ public class Screen_Main extends Activity
         // enable ActionBar app icon to behave as action to toggle nav drawer
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
+        //Net daai icon weg vat...
+        getActionBar().setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the sliding drawer and the action bar app icon
@@ -313,31 +314,28 @@ public class Screen_Main extends Activity
                             String menuTitle = getResources().getStringArray(R.array.menuitems)[0];
                             View rootView = inflater.inflate(R.layout.screen_home, container, false);
                             //Doen veranderinge aan layout hier... bv Textviews ens...
-                            getActivity().setTitle(menuTitle);
+                            getActivity().setTitle(getResources().getStringArray(R.array.menuitems)[0]);
                             return rootView;
                         }
                 case 1:
                         {
-                            String menuTitle = getResources().getStringArray(R.array.menuitems)[0];
                             View rootView = inflater.inflate(R.layout.screen_settings, container, false);
                             //Doen veranderinge aan layout hier... bv Textviews ens...
-                            getActivity().setTitle(menuTitle);
+                            getActivity().setTitle(getResources().getStringArray(R.array.menuitems)[1]);
                             return rootView;
                         }
                 case 2:
                         {
-                            String menuTitle = getResources().getStringArray(R.array.menuitems)[0];
                             View rootView = inflater.inflate(R.layout.screen_change_color, container, false);
                             //Doen veranderinge aan layout hier... bv Textviews ens...
-                            getActivity().setTitle(menuTitle);
+                            getActivity().setTitle(getResources().getStringArray(R.array.menuitems)[2]);
                             return rootView;
                         }
                 case 3:
                         {
-                            String menuTitle = getResources().getStringArray(R.array.menuitems)[0];
                             View rootView = inflater.inflate(R.layout.screen_help, container, false);
                             //Doen veranderinge aan layout hier... bv Textviews ens...
-                            getActivity().setTitle(menuTitle);
+                            getActivity().setTitle(getResources().getStringArray(R.array.menuitems)[3]);
                             return rootView;
                         }
                 default:   
