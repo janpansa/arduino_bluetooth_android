@@ -44,6 +44,9 @@ public class Screen_Main extends Activity
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
+        // Remove the icon before the content is show ... sigh :-)
+        getActionBar().setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_main);
         
@@ -62,7 +65,8 @@ public class Screen_Main extends Activity
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
         //Net daai icon weg vat...
-        getActionBar().setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+        
+        
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the sliding drawer and the action bar app icon
