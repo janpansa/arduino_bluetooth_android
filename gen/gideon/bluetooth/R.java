@@ -24,7 +24,6 @@ public final class R {
         public static final int ic_launcher_1=0x7f020004;
     }
     public static final class id {
-        public static final int action_websearch=0x7f090009;
         public static final int content_frame=0x7f090004;
         public static final int drawer_layout=0x7f090003;
         public static final int hometext=0x7f090002;
