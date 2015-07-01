@@ -1,14 +1,17 @@
 package gideon.bluetooth;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -233,19 +236,27 @@ public class Screen_Main extends Activity
 
     private void selectItem(int position)
     {
-        // update the main content by replacing fragments
-        Fragment fragment = new ContainerFragment();
-        Bundle args = new Bundle();
-        args.putInt(ContainerFragment.FRAGMENT_NUMBER, position);
-        fragment.setArguments(args);
+        int EXIT = 4;
+        if(position==EXIT)
+        {
+            onBackPressed();
+        }
+        else
+        {
+            // update the main content by replacing fragments
+            Fragment fragment = new ContainerFragment();
+            Bundle args = new Bundle();
+            args.putInt(ContainerFragment.FRAGMENT_NUMBER, position);
+            fragment.setArguments(args);
 
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
-        // update selected item and title, then close the drawer
-        mDrawerList.setItemChecked(position, true);
-        setTitle(mPlanetTitles[position]);
-        mDrawerLayout.closeDrawer(mDrawerList);
+            // update selected item and title, then close the drawer
+            mDrawerList.setItemChecked(position, true);
+            setTitle(mPlanetTitles[position]);
+            mDrawerLayout.closeDrawer(mDrawerList);
+        }
     }
 
     @Override
@@ -273,6 +284,76 @@ public class Screen_Main extends Activity
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+    
+    //--------------------------
+    //  All the overrides.
+    //
+    //  I add these if needed later,
+    //  e.g. we want to disconnect
+    //  the bluetooth on Pause()
+    //  etc...
+    //
+    //--------------------------
+    
+    //--------------------------
+    //  onBackPressed
+    //--------------------------
+    @Override
+    public void onBackPressed()
+    {
+        new AlertDialog.Builder(this)
+        .setMessage(Html.fromHtml("<cite>Quit ?</cite>"))
+        .setNegativeButton("No", new android.content.DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface arg0, int arg1)
+            {
+               arg0.dismiss();
+            }
+        })
+        .setPositiveButton("Yes", new android.content.DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface arg0, int arg1)
+            {
+                finish();
+            }
+        }).create().show();
+    }
+    
+    //--------------------------
+    //  onPause
+    //--------------------------
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+    }
+    
+    //--------------------------
+    //  onStop
+    //--------------------------
+    @Override
+    public void onStop()
+    {
+        super.onStop();
+    }
+    
+    //--------------------------
+    //  onResume
+    //--------------------------
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+    }
+    
+    //--------------------------
+    //  onStart
+    //--------------------------
+    @Override
+    public void onStart()
+    {
+        super.onStart();
     }
 
     public static class ContainerFragment extends Fragment
