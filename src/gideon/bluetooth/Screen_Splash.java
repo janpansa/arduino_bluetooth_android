@@ -32,7 +32,7 @@ import java.util.logging.Logger;
 public class Screen_Splash extends Activity
 {
     // Set the display time, in milliseconds (or extract it out as a configurable parameter)
-    private final int SPLASH_DISPLAY_LENGTH = 10000;
+    private final int SPLASH_DISPLAY_LENGTH = 3000;
 
     TextView versiontext;
     TextView textview;

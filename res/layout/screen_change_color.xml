@@ -1,0 +1,12 @@
+<!-- Onthou net, hierdie word binne in die main frame layout in geload, so nie nodig vir enige top level containers nie. Behalwe xmlns blykbaar :3  -->
+
+<TextView   xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/hometext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f9f9f9"
+            android:text="Colors Screen"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="10sp"/>
