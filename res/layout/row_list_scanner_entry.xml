@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/entrylayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" android:background="#ffffff">
+    
+        <ImageView android:id="@+id/packageimage"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="left"/>
+        
+        <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        
+        <TextView
+        android:id="@+id/numberheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/packageimage"
+        android:layout_toRightOf="@+id/packageimage"
+        android:layout_marginLeft="10dp"
+        android:textColor="#6f6f6f"
+        android:textSize="25sp"
+        android:text="NAME"
+        android:textStyle="bold"/>
+        <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/numberheader"
+        android:layout_toRightOf="@+id/numberheader"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#6f6f6f"
+        android:textSize="15sp"
+        android:text=""
+        android:textStyle="normal"/>
+        
+        <TextView
+        android:id="@+id/addressheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/packageimage"
+        android:layout_toRightOf="@+id/packageimage"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#6f6f6f"
+        android:textSize="25sp"
+        android:text="ADDRESS"
+        android:textStyle="bold"/>
+        <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addressheader"
+        android:layout_toRightOf="@+id/addressheader"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#6f6f6f"
+        android:textSize="15sp"
+        android:text=""
+        android:textStyle="normal"/>
+       
+        <TextView
+        android:id="@+id/isdefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:textColor="#6f6f6f"
+        android:textSize="15sp"
+        android:text=""
+        android:textStyle="normal"/>
+        
+</RelativeLayout>

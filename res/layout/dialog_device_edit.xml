@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="#ffffff">
+
+        <LinearLayout
+        android:id="@+id/alert_linearlayout_login"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+                    
+                    <!-- Flightnumber -->
+                    <EditText
+                    android:id="@+id/edittextname"
+                    android:hint="Device Name"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#6f6f6f"
+                    android:layout_marginRight="20dp"/>
+                   
+                    <Button
+                    android:id="@+id/buttonsave"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Save"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="#6f6f6f"
+                    android:textSize="25sp"
+                    android:layout_gravity="left"
+                    android:gravity="center"/>
+                             
+                    <Button
+                    android:id="@+id/buttoncancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Cancel"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="#6f6f6f"
+                    android:textSize="25sp"
+                    android:layout_gravity="left"
+                    android:gravity="center"/>
+            </LinearLayout>
+</LinearLayout>

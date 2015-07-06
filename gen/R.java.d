@@ -12,12 +12,16 @@
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/drawable-xxhdpi/ic_launcher.png \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/screen_settings.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/screen_main.xml \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/row_list_scanner_entry.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/screen_change_color.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/drawer_list_item.xml \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/dialog_device.xml \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/dialog_device_edit.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/screen_splash.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/device_menu.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/screen_home.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/screen_help.xml \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/menu_list_device.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/drawable-mdpi/ic_launcher.png \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/res/drawable-hdpi/ic_launcher.png \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/res/drawable-xhdpi/ic_launcher.png \
