@@ -4,10 +4,11 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="5dip" android:background="#ffffff">
+    android:padding="5dip"
+    android:background="@null">
     
         <ImageView android:id="@+id/packageimage"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/bluetooth"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
         android:layout_width="70dp"
@@ -28,8 +29,8 @@
         android:layout_toRightOf="@+id/packageimage"
         android:layout_marginLeft="10dp"
         android:textColor="#6f6f6f"
-        android:textSize="25sp"
-        android:text="NAME"
+        android:textSize="20sp"
+        android:text="Name"
         android:textStyle="bold"/>
         <TextView
         android:id="@+id/name"
@@ -53,8 +54,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
         android:textColor="#6f6f6f"
-        android:textSize="25sp"
-        android:text="ADDRESS"
+        android:textSize="20sp"
+        android:text="Address"
         android:textStyle="bold"/>
         <TextView
         android:id="@+id/address"

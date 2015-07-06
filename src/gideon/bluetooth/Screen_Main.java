@@ -29,7 +29,6 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import java.util.Set;
@@ -61,7 +60,6 @@ public class Screen_Main extends Activity
     public static Handler_Database_devices databaseHelper;
     public static Dialog dialogdevices,dialogdevicesedit;
     public static BaseAdapter listAdapterDevices;
-    public static String mcnumscanner;
     
     /** Called when the activity is first created. */
     @Override
@@ -527,28 +525,28 @@ public class Screen_Main extends Activity
                                                     // Add the name and address to an array adapter to show in a ListView
                                                     if(count == position)
                                                     {
-                                                        //Hier add ons die scanner in die local database.
+                                                        //Hier add ons die device in die local database.
 
-                                                        //Kyk eers of daar ander scanners is.
-                                                        int amountOfScanner;
+                                                        //Kyk eers of daar ander devices is.
+                                                        int amountOfDevices;
                                                         Handler_Database_devices dbHelpertemp0 = new Handler_Database_devices(v.getContext());
-                                                        amountOfScanner = dbHelpertemp0.getDevicesAmount();
+                                                        amountOfDevices = dbHelpertemp0.getDevicesAmount();
                                                         dbHelpertemp0.close();
 
                                                         String default_device = "YES";
 
                                                         //If there is more than one scanner, do not make this the default scanner.
-                                                        if(amountOfScanner > 0)
+                                                        if(amountOfDevices > 0)
                                                         {
                                                             default_device = "NO";
                                                         }
 
-                                                        //Add the scanner to the database
+                                                        //Add the device to the database
                                                         Handler_Database_devices dbHelpertemp = new Handler_Database_devices(v.getContext());
                                                         dbHelpertemp.addDevice(device.getAddress(), device.getName(), "", default_device);
                                                         dbHelpertemp.close();
 
-                                                        //Refresh the list of saved scanner's adapter.
+                                                        //Refresh the list of saved device's adapter.
                                                         displayLatestList(v.getContext());
                                                         registerForContextMenu(listDevices);
 
@@ -573,9 +571,6 @@ public class Screen_Main extends Activity
                                     dialogdevices.show();
                                 }
                             });
-                            
-                            
-                            
                             
                             return rootView;
                         }
@@ -685,9 +680,8 @@ public class Screen_Main extends Activity
             case R.id.menu_rename:
                 dialogdevicesedit = new Dialog(this);
                 dialogdevicesedit.setContentView(R.layout.dialog_device_edit);
-                dialogdevicesedit.setTitle(Html.fromHtml("<font color='#6f6f6f'>Rename Scanner</font>"));
-                //dialogScannerEdit.getWindow().setLayout(450, 600);
-
+                dialogdevicesedit.setTitle(Html.fromHtml("<font color='#6f6f6f'>Rename Device</font>"));
+                
                 final EditText name = (EditText ) dialogdevicesedit.findViewById(R.id.edittextname);
                 Button buttonsave = (Button) dialogdevicesedit.findViewById(R.id.buttonsave);
                 Button buttoncancel = (Button) dialogdevicesedit.findViewById(R.id.buttoncancel);
