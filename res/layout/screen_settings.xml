@@ -1,58 +1,69 @@
 <!-- Onthou net, hierdie word binne in die main frame layout in geload, so nie nodig vir enige top level containers nie. Behalwe xmlns blykbaar :3  -->
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:orientation="vertical"
     android:layout_marginTop="5dp"
     android:background="@null">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1.0">
         <TextView
             android:id="@+id/tv_devices_heading"
             android:text="Bluetooth Devices"
             android:layout_width="fill_parent"
-            android:layout_height="45dp"
+            android:layout_weight="0.1"
+            android:layout_height="0dp"
             android:textSize="25sp"
             android:textColor="#6f6f6f"
             android:layout_gravity="left"
             android:gravity="left"
             android:padding="3dp"
             android:layout_margin="10dp"/>
-        <TextView
-            android:id="@+id/emptylist1"
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_devices_heading"
-            android:textColor="#6f6f6f"
-            android:textSize="20sp"
-            android:padding="3dp"
-            android:layout_marginBottom="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="No devices have been added..."
-            android:fontFamily="sans-serif-light"/>
-        <ListView
-            android:id="@+id/listview_devices"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_devices_heading"
-            android:padding="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:cacheColorHint="#00000000"
-            android:divider="#DEDEDE"
-            android:dividerHeight="1px">
-        </ListView>
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@null">
+            <TextView
+                android:id="@+id/emptylist1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_devices_heading"
+                android:textColor="#6f6f6f"
+                android:textSize="20sp"
+                android:padding="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="No devices have been added..."
+                android:fontFamily="sans-serif-light"/>
+            <ListView
+                android:id="@+id/listview_devices"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:cacheColorHint="#00000000"
+                android:divider="#3a3a3a"
+                android:dividerHeight="1px">
+            </ListView>
+        </RelativeLayout>
         <Button
             android:id="@+id/add_device_button"
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_weight="0.1"
+            android:layout_height="0dp"
             android:padding="3dp"
             android:text="Add Device"
-            android:layout_alignParentBottom="true"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
-    </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
