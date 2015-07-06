@@ -340,6 +340,12 @@ public class Screen_Main extends Activity
         {
             public void onClick(DialogInterface arg0, int arg1)
             {
+                //Switch the bluetooth off when done.
+                BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
+                if (mBluetoothAdapter.isEnabled())
+                {
+                    mBluetoothAdapter.disable();
+                } 
                 finish();
             }
         }).create().show();
