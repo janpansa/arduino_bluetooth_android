@@ -1,35 +1,28 @@
 <!-- Onthou net, hierdie word binne in die main frame layout in geload, so nie nodig vir enige top level containers nie. Behalwe xmlns blykbaar :3  -->
 
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" android:id="@+id/llbluetoothsettings"
-    layout_width="match_parent">
-    <TextView
-        android:id="@+id/tv_scanner_heading"
-        android:text="Bluetooth Devices"
-        android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        android:textSize="25sp"
-        android:layout_gravity="center"
-        android:gravity="left"
-        android:padding="7dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
-    <RelativeLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@null">
+    android:layout_height="fill_parent"
+    android:layout_marginTop="5dp"
+    android:background="@null">
+        <TextView
+            android:id="@+id/tv_devices_heading"
+            android:text="Bluetooth Devices"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:textSize="25sp"
+            android:textColor="#6f6f6f"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:padding="3dp"
+            android:layout_margin="10dp"/>
         <TextView
             android:id="@+id/emptylist1"
-            android:layout_width="450dp"
-            android:layout_height="80dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_devices_heading"
             android:textColor="#6f6f6f"
             android:textSize="20sp"
             android:padding="3dp"
@@ -39,9 +32,10 @@
             android:text="No devices have been added..."
             android:fontFamily="sans-serif-light"/>
         <ListView
-            android:id="@+id/listview_scanners"
-            android:layout_width="450dp"
-            android:layout_height="135dp"
+            android:id="@+id/listview_devices"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_devices_heading"
             android:padding="3dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
@@ -50,16 +44,15 @@
             android:divider="#DEDEDE"
             android:dividerHeight="1px">
         </ListView>
+        <Button
+            android:id="@+id/add_device_button"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:padding="3dp"
+            android:text="Add Device"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
     </RelativeLayout>
-    <Button
-        android:id="@+id/add_scanner_button"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:padding="3dp"
-        android:text="Add Device"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
-</LinearLayout>
