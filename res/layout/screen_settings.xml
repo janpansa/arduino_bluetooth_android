@@ -22,6 +22,7 @@
             android:layout_gravity="left"
             android:gravity="left"
             android:padding="3dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
         <RelativeLayout
@@ -37,7 +38,6 @@
                 android:textColor="#6f6f6f"
                 android:textSize="20sp"
                 android:padding="3dp"
-                android:layout_marginBottom="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:text="No devices have been added..."
@@ -47,7 +47,6 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:cacheColorHint="#00000000"
@@ -62,7 +61,6 @@
             android:layout_height="0dp"
             android:padding="3dp"
             android:text="Add Device"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_margin="10dp"/>
     </LinearLayout>
 </LinearLayout>
