@@ -268,6 +268,16 @@ public class Screen_Main extends Activity
         }
         else
         {
+            // TODO : Gideon fix fragment management.
+            
+            /*  Hier is waar ek die actual fragments replace...
+            Hierdie moet verander na aparte fragments in plaas van 
+            net die layouts wat verander verkieslik, sodat ek vir 
+            aparte fragments meer beheer kan he oor goed soos on resume,
+            exit ens en ook om bluetooth beter te beheer per fragment 
+            ipv vir al die fragments.
+            */
+            
             // update the main content by replacing fragments
             Fragment fragment = new ContainerFragment();
             Bundle args = new Bundle();
