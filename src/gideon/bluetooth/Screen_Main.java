@@ -265,7 +265,7 @@ public class Screen_Main extends Activity
     {
         "gideon.bluetooth.Screen_Home",
         "gideon.bluetooth.Screen_Settings",
-        "gideon.bluetooth.Screen_Color",
+        "gideon.bluetooth.Screen_Change_Color",
         "gideon.bluetooth.Screen_Help"
     };
 
