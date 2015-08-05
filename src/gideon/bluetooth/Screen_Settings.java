@@ -42,6 +42,8 @@ import java.util.Set;
  */
 public class Screen_Settings extends Fragment
 {
+    Boolean allowsBackPress = false;
+    
     public Screen_Settings(){}
     
     @Override

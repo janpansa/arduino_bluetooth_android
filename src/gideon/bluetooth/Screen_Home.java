@@ -17,6 +17,8 @@ import android.view.ViewGroup;
  */
 public class Screen_Home extends Fragment
 {
+    Boolean allowsBackPress = true;
+    
     public Screen_Home(){}
     
     @Override

@@ -10,6 +10,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  *
@@ -17,6 +18,8 @@ import android.view.ViewGroup;
  */
 public class Screen_Help extends Fragment
 {
+    Boolean allowsBackPress = false;
+    
     public Screen_Help(){}
     
     @Override

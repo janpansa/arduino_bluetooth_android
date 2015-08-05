@@ -278,9 +278,42 @@ public class Screen_Main extends Activity
         }
         else
         {
+            //Ek maak 'n tag vir die fragments om te gebruik vir die back button check later
+            String TAG;
+            if(position == 0)
+            {
+                TAG = "Home";
+            }
+            else if(position == 1)
+            {
+                TAG = "Settings";
+            }
+            else if(position == 2)
+            {
+                TAG = "Color";
+            }
+            else if(position == 3)
+            {
+                TAG = "Help";
+            }
+            else
+            {
+                TAG = "Home";
+            }
+            
             // update the main content by replacing fragments
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content_frame, Fragment.instantiate(Screen_Main.this, screens[position])).commit();
+            
+            //Ek dink nie Home moet op die back stack weees nie.
+            if(TAG=="Home")
+            {
+               fragmentManager.beginTransaction().replace(R.id.content_frame, Fragment.instantiate(Screen_Main.this, screens[position]),TAG).commit(); 
+            }
+            else
+            {
+                fragmentManager.beginTransaction().replace(R.id.content_frame, Fragment.instantiate(Screen_Main.this, screens[position]),TAG).addToBackStack("previousFragment").commit();
+            }
+            
             
             // update selected item and title, then close the drawer
             mDrawerList.setItemChecked(position, true);
@@ -332,28 +365,32 @@ public class Screen_Main extends Activity
     @Override
     public void onBackPressed()
     {
-        new AlertDialog.Builder(this)
-        .setMessage(Html.fromHtml("<cite>Quit ?</cite>"))
-        .setNegativeButton("No", new android.content.DialogInterface.OnClickListener()
+        //First check if the home fragment is active, else don't handle the back press.
+        if(getFragmentManager().findFragmentByTag("Home").isVisible())
         {
-            public void onClick(DialogInterface arg0, int arg1)
+            new AlertDialog.Builder(this)
+            .setMessage(Html.fromHtml("<cite>Quit ?</cite>"))
+            .setNegativeButton("No", new android.content.DialogInterface.OnClickListener()
             {
-               arg0.dismiss();
-            }
-        })
-        .setPositiveButton("Yes", new android.content.DialogInterface.OnClickListener()
-        {
-            public void onClick(DialogInterface arg0, int arg1)
-            {
-                //Switch the bluetooth off when done.
-                BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
-                if (mBluetoothAdapter.isEnabled())
+                public void onClick(DialogInterface arg0, int arg1)
                 {
-                    mBluetoothAdapter.disable();
-                } 
-                finish();
-            }
-        }).create().show();
+                   arg0.dismiss();
+                }
+            })
+            .setPositiveButton("Yes", new android.content.DialogInterface.OnClickListener()
+            {
+                public void onClick(DialogInterface arg0, int arg1)
+                {
+                    //Switch the bluetooth off when done.
+                    BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
+                    if (mBluetoothAdapter.isEnabled())
+                    {
+                        mBluetoothAdapter.disable();
+                    } 
+                    finish();
+                }
+            }).create().show();
+        }
     }
     
     //--------------------------
