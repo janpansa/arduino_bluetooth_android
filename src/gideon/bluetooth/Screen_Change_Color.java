@@ -17,8 +17,6 @@ import android.view.ViewGroup;
  */
 public class Screen_Change_Color extends Fragment
 {
-    Boolean allowsBackPress = false;
-    
     public Screen_Change_Color(){}
     
     @Override

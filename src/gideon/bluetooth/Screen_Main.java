@@ -31,6 +31,8 @@ public class Screen_Main extends Activity
     //ArrayAdapter<String> mArrayAdapter;
     public static String mcnum;
     
+    public Boolean isExit = false;
+    
     //Navigation drawer
     //------------------------------
     private DrawerLayout mDrawerLayout;
@@ -274,6 +276,7 @@ public class Screen_Main extends Activity
         int EXIT = 4;
         if(position==EXIT)
         {
+            isExit = true;
             onBackPressed();
         }
         else
@@ -305,7 +308,7 @@ public class Screen_Main extends Activity
             FragmentManager fragmentManager = getFragmentManager();
             
             //Ek dink nie Home moet op die back stack weees nie.
-            if(TAG=="Home")
+            if("Home".equals(TAG))
             {
                fragmentManager.beginTransaction().replace(R.id.content_frame, Fragment.instantiate(Screen_Main.this, screens[position]),TAG).commit(); 
             }
@@ -366,7 +369,7 @@ public class Screen_Main extends Activity
     public void onBackPressed()
     {
         //First check if the home fragment is active, else don't handle the back press.
-        if(getFragmentManager().findFragmentByTag("Home").isVisible())
+        if(getFragmentManager().findFragmentByTag("Home").isVisible()||isExit)
         {
             new AlertDialog.Builder(this)
             .setMessage(Html.fromHtml("<cite>Quit ?</cite>"))
@@ -374,6 +377,7 @@ public class Screen_Main extends Activity
             {
                 public void onClick(DialogInterface arg0, int arg1)
                 {
+                   isExit = false;
                    arg0.dismiss();
                 }
             })
@@ -390,6 +394,11 @@ public class Screen_Main extends Activity
                     finish();
                 }
             }).create().show();
+        }
+        else
+        {
+            //Go back to the first screen...
+            getFragmentManager().beginTransaction().replace(R.id.content_frame, Fragment.instantiate(Screen_Main.this, screens[0]),"Home").commit();
         }
     }
     

@@ -18,8 +18,6 @@ import android.widget.Toast;
  */
 public class Screen_Help extends Fragment
 {
-    Boolean allowsBackPress = false;
-    
     public Screen_Help(){}
     
     @Override
