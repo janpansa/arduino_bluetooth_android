@@ -46,7 +46,7 @@ public class Screen_Settings extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
         //Verander die Title van die Fragment/Activity
-        getActivity().setTitle(getResources().getStringArray(R.array.menuitems)[0]);
+        getActivity().setTitle(getResources().getStringArray(R.array.menuitems)[1]);
         
         //Inflate die fragment met sy layout.
         View rootView = inflater.inflate(R.layout.screen_settings, container, false);
