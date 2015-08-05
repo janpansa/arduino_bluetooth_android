@@ -384,7 +384,7 @@ public class Screen_Main extends Activity
             else
             {
                 //Maak seker die bluetooth is aan.
-                if (!tempAdapter.isEnabled())
+                if (tempAdapter.isEnabled())
                 {
                     isBluetoothOn = true;
                 }
@@ -438,12 +438,6 @@ public class Screen_Main extends Activity
                 {
                     public void onClick(DialogInterface arg0, int arg1)
                     {
-                        //Switch the bluetooth off when done.
-                        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
-                        if (mBluetoothAdapter.isEnabled())
-                        {
-                            mBluetoothAdapter.disable();
-                        } 
                         finish();
                     }
                 }).create().show();
