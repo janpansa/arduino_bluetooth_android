@@ -16,6 +16,7 @@
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/row_list_scanner_entry.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/screen_change_color.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/drawer_list_item.xml \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/dialog_checkbox.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/dialog_device.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/dialog_device_edit.xml \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/res/layout/screen_splash.xml \

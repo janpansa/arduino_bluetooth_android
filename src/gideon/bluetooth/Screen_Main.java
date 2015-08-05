@@ -21,6 +21,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 
 
@@ -371,29 +374,80 @@ public class Screen_Main extends Activity
         //First check if the home fragment is active, else don't handle the back press.
         if(getFragmentManager().findFragmentByTag("Home").isVisible()||isExit)
         {
-            new AlertDialog.Builder(this)
-            .setMessage(Html.fromHtml("<cite>Quit ?</cite>"))
-            .setNegativeButton("No", new android.content.DialogInterface.OnClickListener()
+            Boolean isBluetoothOn = false;
+            BluetoothAdapter tempAdapter = BluetoothAdapter.getDefaultAdapter();
+            if (tempAdapter == null)
             {
-                public void onClick(DialogInterface arg0, int arg1)
+                // Device does not support Bluetooth
+                
+            }
+            else
+            {
+                //Maak seker die bluetooth is aan.
+                if (!tempAdapter.isEnabled())
                 {
-                   isExit = false;
-                   arg0.dismiss();
+                    isBluetoothOn = true;
                 }
-            })
-            .setPositiveButton("Yes", new android.content.DialogInterface.OnClickListener()
+            }
+            
+            if(isBluetoothOn)
             {
-                public void onClick(DialogInterface arg0, int arg1)
+                View dialog_checkbox = View.inflate(this, R.layout.dialog_checkbox, null);
+                CheckBox checkbluetooth = (CheckBox) dialog_checkbox.findViewById(R.id.checkbluetooth);
+                checkbluetooth.setChecked(true);//In most cases, bluetooth won't be ON before our app was launched, so in most cases we want the default behaviour to switch it off when we exit.
+                checkbluetooth.setText("Turn Bluetooth off ?");
+                
+                new AlertDialog.Builder(this)
+                .setMessage(Html.fromHtml("<cite>Quit ?</cite>"))
+                .setView(dialog_checkbox)
+                .setNegativeButton("No", new android.content.DialogInterface.OnClickListener()
                 {
-                    //Switch the bluetooth off when done.
-                    BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
-                    if (mBluetoothAdapter.isEnabled())
+                    public void onClick(DialogInterface arg0, int arg1)
                     {
-                        mBluetoothAdapter.disable();
-                    } 
-                    finish();
-                }
-            }).create().show();
+                       isExit = false;
+                       arg0.dismiss();
+                    }
+                })
+                .setPositiveButton("Yes", new android.content.DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface arg0, int arg1)
+                    {
+                        //Switch the bluetooth off when done.
+                        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
+                        if (mBluetoothAdapter.isEnabled())
+                        {
+                            mBluetoothAdapter.disable();
+                        } 
+                        finish();
+                    }
+                }).create().show();
+            }
+            else
+            {
+                new AlertDialog.Builder(this)
+                .setMessage(Html.fromHtml("<cite>Quit ?</cite>"))
+                .setNegativeButton("No", new android.content.DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface arg0, int arg1)
+                    {
+                       isExit = false;
+                       arg0.dismiss();
+                    }
+                })
+                .setPositiveButton("Yes", new android.content.DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface arg0, int arg1)
+                    {
+                        //Switch the bluetooth off when done.
+                        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
+                        if (mBluetoothAdapter.isEnabled())
+                        {
+                            mBluetoothAdapter.disable();
+                        } 
+                        finish();
+                    }
+                }).create().show();
+            }
         }
         else
         {

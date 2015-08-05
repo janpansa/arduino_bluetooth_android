@@ -17,6 +17,7 @@
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Main$1.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Help.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Main$2.class \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Main$5.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Main$DrawerItemClickListener.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Change_Color.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Settings.class \
@@ -24,6 +25,7 @@
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/BuildConfig.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Splash$1.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/R$menu.class \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Main$4.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Settings$4.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Settings$5.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/R$style.class \
