@@ -258,6 +258,15 @@ public class Screen_Main extends Activity
             selectItem(position);
         }
     }
+    
+    //Ek sit die fragments in n array vir die fragment manager hier onder.
+    final String[] fragments =
+    {
+        "gideon.bluetooth.Screen_Home",
+        "gideon.bluetooth.Screen_Settings",
+        "gideon.bluetooth.Screen_Color",
+        "gideon.bluetooth.Screen_Help"
+    };
 
     private void selectItem(int position)
     {
@@ -278,7 +287,23 @@ public class Screen_Main extends Activity
             ipv vir al die fragments.
             */
             
+            //Ok, so my thoughts are to get rid of the container 
+            //fragment class and just use new fragments each time.
+            
             // update the main content by replacing fragments
+            
+             /*
+                Fragment Volgorde
+                ------------------
+                0: Home
+                1: Settings
+                2: Change color
+                3: Help
+                4: Exit (TODO: moet voor hierdie gehandle word met 'n dialog vir exit...)
+            */
+            
+            
+            
             Fragment fragment = new ContainerFragment();
             Bundle args = new Bundle();
             args.putInt(ContainerFragment.FRAGMENT_NUMBER, position);
