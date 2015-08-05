@@ -17,6 +17,9 @@ import android.view.ViewGroup;
  */
 public class Screen_Home extends Fragment
 {
+    //Default constructor, because aparently fragments needs one.
+    public Screen_Home(){}
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
