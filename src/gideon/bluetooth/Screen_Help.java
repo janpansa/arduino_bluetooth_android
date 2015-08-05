@@ -17,6 +17,8 @@ import android.view.ViewGroup;
  */
 public class Screen_Help extends Fragment
 {
+    public Screen_Help(){}
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {

@@ -17,6 +17,8 @@ import android.view.ViewGroup;
  */
 public class Screen_Change_Color extends Fragment
 {
+    public Screen_Change_Color(){}
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {

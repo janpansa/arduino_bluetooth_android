@@ -42,6 +42,8 @@ import java.util.Set;
  */
 public class Screen_Settings extends Fragment
 {
+    public Screen_Settings(){}
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
