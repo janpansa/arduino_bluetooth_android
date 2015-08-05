@@ -259,8 +259,19 @@ public class Screen_Main extends Activity
         }
     }
     
-    //Ek sit die fragments in n array vir die fragment manager hier onder.
-    final String[] fragments =
+    // Ek sit die fragments in n array vir die fragment manager hier onder.
+    
+     /*
+        Fragment Volgorde
+        ------------------
+        0: Home
+        1: Settings
+        2: Change color
+        3: Help
+        4: Exit (TODO: moet voor hierdie gehandle word met 'n dialog vir exit...)
+    */
+    
+    final String[] screens =
     {
         "gideon.bluetooth.Screen_Home",
         "gideon.bluetooth.Screen_Settings",
@@ -277,41 +288,10 @@ public class Screen_Main extends Activity
         }
         else
         {
-            // TODO : Gideon fix fragment management.
-            
-            /*  Hier is waar ek die actual fragments replace...
-            Hierdie moet verander na aparte fragments in plaas van 
-            net die layouts wat verander verkieslik, sodat ek vir 
-            aparte fragments meer beheer kan he oor goed soos on resume,
-            exit ens en ook om bluetooth beter te beheer per fragment 
-            ipv vir al die fragments.
-            */
-            
-            //Ok, so my thoughts are to get rid of the container 
-            //fragment class and just use new fragments each time.
-            
             // update the main content by replacing fragments
-            
-             /*
-                Fragment Volgorde
-                ------------------
-                0: Home
-                1: Settings
-                2: Change color
-                3: Help
-                4: Exit (TODO: moet voor hierdie gehandle word met 'n dialog vir exit...)
-            */
-            
-            
-            
-            Fragment fragment = new ContainerFragment();
-            Bundle args = new Bundle();
-            args.putInt(ContainerFragment.FRAGMENT_NUMBER, position);
-            fragment.setArguments(args);
-
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
+            fragmentManager.beginTransaction().replace(R.id.content_frame, Fragment.instantiate(Screen_Main.this, screens[position])).commit();
+            
             // update selected item and title, then close the drawer
             mDrawerList.setItemChecked(position, true);
             setTitle(mFragmentTitles[position]);
