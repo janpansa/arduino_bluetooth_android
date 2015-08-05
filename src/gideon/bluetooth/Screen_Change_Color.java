@@ -15,16 +15,16 @@ import android.view.ViewGroup;
  *
  * @author gideon
  */
-public class Screen_Home extends Fragment
+public class Screen_Change_Color extends Fragment
 {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
         //Verander die Title van die Fragment/Activity
-        getActivity().setTitle(getResources().getStringArray(R.array.menuitems)[0]);
+        getActivity().setTitle(getResources().getStringArray(R.array.menuitems)[2]);
         
         //Inflate die fragment met sy layout.
-        View rootView = inflater.inflate(R.layout.screen_home, container, false);
+        View rootView = inflater.inflate(R.layout.screen_change_color, container, false);
         
         //Doen veranderinge aan layout hier... bv Textviews ens...
         return rootView;
