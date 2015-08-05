@@ -393,7 +393,7 @@ public class Screen_Main extends Activity
             if(isBluetoothOn)
             {
                 View dialog_checkbox = View.inflate(this, R.layout.dialog_checkbox, null);
-                CheckBox checkbluetooth = (CheckBox) dialog_checkbox.findViewById(R.id.checkbluetooth);
+                final CheckBox checkbluetooth = (CheckBox) dialog_checkbox.findViewById(R.id.checkbluetooth);
                 checkbluetooth.setChecked(true);//In most cases, bluetooth won't be ON before our app was launched, so in most cases we want the default behaviour to switch it off when we exit.
                 checkbluetooth.setText("Turn Bluetooth off ?");
                 
@@ -412,12 +412,16 @@ public class Screen_Main extends Activity
                 {
                     public void onClick(DialogInterface arg0, int arg1)
                     {
-                        //Switch the bluetooth off when done.
-                        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
-                        if (mBluetoothAdapter.isEnabled())
+                        //Lets first make sure the user did not change his mind.
+                        if(checkbluetooth.isChecked())
                         {
-                            mBluetoothAdapter.disable();
-                        } 
+                            //Switch the bluetooth off when done.
+                            BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
+                            if (mBluetoothAdapter.isEnabled())
+                            {
+                                mBluetoothAdapter.disable();
+                            }
+                        }
                         finish();
                     }
                 }).create().show();
