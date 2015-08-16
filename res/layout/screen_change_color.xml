@@ -1,12 +1,65 @@
-<!-- Onthou net, hierdie word binne in die main frame layout in geload, so nie nodig vir enige top level containers nie. Behalwe xmlns blykbaar :3  -->
-
-<TextView   xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/hometext"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:background="@null">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="10">
+        <Spinner
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#f9f9f9"
-            android:text="Colors Screen"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:textSize="10sp"/>
+            android:layout_height="50dp"
+            android:id="@+id/spinner"
+            android:layout_weight="5"
+            android:padding="5dp" />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/spinner2"
+            android:layout_weight="5"
+            android:padding="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="10" >
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Live Preview"
+            android:id="@+id/checkBox"
+            android:layout_weight="5"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textColor="#ffffffff" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:background="#ffffffff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <SurfaceView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/surfaceView"
+            android:background="#3d3d3d" />
+    </LinearLayout>
+</LinearLayout>
