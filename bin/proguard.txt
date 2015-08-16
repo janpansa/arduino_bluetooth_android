@@ -1,7 +1,7 @@
 # view res/layout/screen_main.xml #generated:2
 -keep class android.support.v4.widget.DrawerLayout { <init>(...); }
 
-# view AndroidManifest.xml #generated:16
+# view AndroidManifest.xml #generated:17
 -keep class gideon.bluetooth.Screen_Main { <init>(...); }
 
 # view AndroidManifest.xml #generated:8
