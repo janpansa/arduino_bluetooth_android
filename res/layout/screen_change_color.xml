@@ -1,3 +1,5 @@
+<!-- Onthou net, hierdie word binne in die main frame layout in geload, so nie nodig vir enige top level containers nie. Behalwe xmlns blykbaar :3  -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -56,10 +58,13 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <SurfaceView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/surfaceView"
-            android:background="#3d3d3d" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/colors" />
     </LinearLayout>
+
 </LinearLayout>

@@ -21,10 +21,11 @@ public final class R {
         public static final int action_search=0x7f020000;
         public static final int activated_background=0x7f020001;
         public static final int bluetooth=0x7f020002;
-        public static final int drawer_shadow=0x7f020003;
-        public static final int ic_drawer=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int ic_launcher_1=0x7f020006;
+        public static final int colors=0x7f020003;
+        public static final int drawer_shadow=0x7f020004;
+        public static final int ic_drawer=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int ic_launcher_1=0x7f020007;
     }
     public static final class id {
         public static final int add_device_button=0x7f09001e;
@@ -42,6 +43,7 @@ public final class R {
         public static final int entrylayout=0x7f09000b;
         public static final int hometext=0x7f090017;
         public static final int id=0x7f09000d;
+        public static final int imageView=0x7f090016;
         public static final int isdefault=0x7f090012;
         public static final int left_drawer=0x7f09001a;
         public static final int listview_device=0x7f090004;
@@ -58,7 +60,6 @@ public final class R {
         public static final int spinner=0x7f090013;
         public static final int spinner2=0x7f090014;
         public static final int splashll=0x7f09001f;
-        public static final int surfaceView=0x7f090016;
         public static final int tv_devices_heading=0x7f09001b;
         public static final int versiontext=0x7f090021;
     }
