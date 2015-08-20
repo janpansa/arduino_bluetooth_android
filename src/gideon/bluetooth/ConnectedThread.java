@@ -1,12 +1,12 @@
 package gideon.bluetooth;
 import android.bluetooth.BluetoothSocket;
 import android.os.Handler;
-import android.os.Message;
-import gideon.bluetooth.Screen_Main;
+import android.util.Log;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.charset.Charset;
 
 /**
  *
@@ -21,6 +21,8 @@ public class ConnectedThread extends Thread
     Handler mHandler;
     //final int SOCKET_CONNECTED = 9998;
     //final int MESSAGE_READ = 9999; 
+    
+    String Message = "";
     
     public ConnectedThread(BluetoothSocket socket, Handler h1)
     {
@@ -53,6 +55,7 @@ public class ConnectedThread extends Thread
                 // Read from the InputStream
                 //BufferedReader r = new BufferedReader(new InputStreamReader(mmInStream));
             
+            /*
                 try
                 {
                     // Read from the InputStream
@@ -80,6 +83,9 @@ public class ConnectedThread extends Thread
                                 break;
                        }
                    }
+                   else
+                   {
+                   }
                 }
                 catch (IOException ex)
                 {
@@ -90,14 +96,31 @@ public class ConnectedThread extends Thread
                 {
                     //android.util.Log.w("     BLUETOOTH     ", "Bluetooth Scale Says: NOTHING");
                 }
+                */
+            
+            //kom ons skryf
+                if(!"".equals(Session.message))
+                {
+                    if(!Message.equals(Session.message))
+                    {
+
+                         Message = Session.message;
+                         Log.d("Message write",Message);
+                         
+                         this.write(Message);
+                    }
+                }
+                
             }
         }
     
+
  
     /* Call this from the main activity to send data to the remote device */
-    public void write(byte[] bytes) {
+    public void write(String s) {
         try {
-            mmOutStream.write(bytes);
+            mmOutStream.write(s.getBytes(Charset.forName("UTF-8")));
+            //mmOutStream.write(bytes);
         } catch (IOException e) { }
     }
  

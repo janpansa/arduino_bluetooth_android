@@ -26,13 +26,16 @@
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Splash$1.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/R$menu.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Main$4.class \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/ColorView.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Settings$4.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Settings$5.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/R$style.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Handler_Database_userinfo.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/R$attr.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Handler_Database_devices.class \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Change_Color$1.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/R$layout.class \
+/home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Session.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/Screen_Settings$6.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/R$string.class \
 /home/gideon/NetBeansProjects/arduino_bluetooth_android/bin/classes/gideon/bluetooth/R$id.class \

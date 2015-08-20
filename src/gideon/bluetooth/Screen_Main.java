@@ -22,8 +22,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 
 
@@ -187,6 +185,7 @@ public class Screen_Main extends Activity
                                 Toast.makeText(Screen_Main.this, "Connecting. Please Wait . . .", Toast.LENGTH_LONG).show();
                                 Connect c = new Connect(device,handler);
                                 c.start();
+        
                             }
                             count++;
                         } 
@@ -221,7 +220,7 @@ public class Screen_Main extends Activity
     }
 
     /* Called whenever we call invalidateOptionsMenu() */
-    @Override
+    @Override//Nou hier wil ons die bluetooth values deurstuur, so , kyk eers of die livepreview checked is.
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);

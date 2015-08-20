@@ -26,6 +26,7 @@ public class Connect extends Thread
     private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
  
     Handler mHandler;
+    public ConnectedThread connectedthread;
     
     public Connect(BluetoothDevice device, Handler h1)
     {
@@ -85,7 +86,7 @@ public class Connect extends Thread
         }
     }
     
-    private void manageConnectedSocket()
+    public void manageConnectedSocket()
     {
         ConnectedThread conn = new ConnectedThread(mmSocket,mHandler);
         //mHandler.obtainMessage(SOCKET_CONNECTED, conn).sendToTarget();
@@ -93,7 +94,6 @@ public class Connect extends Thread
         conn.start();
     }
 
- 
     // Will cancel an in-progress connection, and close the socket 
     public void cancel() {
         try {
